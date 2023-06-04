@@ -20,6 +20,7 @@ func main() {
 
 	router.GET("/", handlers.Ping)
 	router.GET("/getNodes", handlers.GetAllNodeNames)
+	router.GET("/getLinks", handlers.GetAllLinkConnections)
 
 	router.Run()
 }
