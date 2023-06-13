@@ -9,10 +9,11 @@ The API checks the Jalapeño API Gateway for the network data and topology and p
 
 ## How to run the API
 
-You can either build the docker container from the repository or use the one on Github.
+You can either build the docker container from the repository or run it directly.
 
 ```
-docker build -t network_graph_api:latest .
+cd build 
+docker build -t network_graph_api:latest -f Dockerfile ../
 docker run -p 8080:8080 network_graph_api:latest
 ```
 
