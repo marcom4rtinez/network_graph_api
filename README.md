@@ -3,7 +3,7 @@
 
 This part of the Network Graph Visualizer is the API written in Golang.
 
-## What does the API do?
+## What does the API do
 
 The API checks the Jalapeño API Gateway for the network data and topology and provides it via a RESTful API.
 
@@ -27,3 +27,7 @@ go run main.go
 ```
 
 Make sure to set the JAGW in configs/config.yml
+
+## Configuration
+
+Make sure to configure the API under `configs/config.yml`
