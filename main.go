@@ -11,14 +11,13 @@ func main() {
 
 	router := gin.Default()
 	config := cors.DefaultConfig()
-	config.AllowAllOrigins = true // allow requests from any origin
+	config.AllowAllOrigins = true
 	config.AllowCredentials = true
-	config.AllowMethods = []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"} // allow all HTTP methods
+	config.AllowMethods = []string{"GET"}
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type"}
 
 	router.Use(cors.New(config))
 
-	router.GET("/", handlers.Ping)
 	router.GET("/getNodes", handlers.GetAllNodeNames)
 	router.GET("/getLinks", handlers.GetAllLinkConnections)
 
